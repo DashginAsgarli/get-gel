@@ -5,7 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 function Navbar() {
     return (
         <>
-            <section className='flex items-center justify-between'>
+            <section className='flex items-center justify-between mb-[30px]'>
                 <div className='font-semibold text-[25px]'>Dashboard</div>
 
                 <div className='flex relative '>
