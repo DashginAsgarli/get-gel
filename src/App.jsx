@@ -2,6 +2,7 @@ import React from 'react';
 import FonLine from "./assets/fonline.svg";
 import Navbar from './component/header/navbar';
 import Aside from './component/aside/aside';
+import HomePage from './component/main/homePage';
 
 
 function App() {
@@ -13,12 +14,14 @@ function App() {
         <div className='bg-[#111111] w-full rounded-[40px] p-[45px]'>
           <Navbar />
 
-          <div className='flex items-center'>
+          <div className='flex items-center gap-8'>
             <div>
               <Aside />
             </div>
 
-            <div></div>
+            <div>
+              <HomePage />
+            </div>
           </div>
         </div>
       </div>
