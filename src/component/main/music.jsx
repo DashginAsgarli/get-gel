@@ -4,7 +4,7 @@ function Music() {
   return (
     <>
       <section>
-        <div className='bg-[#1E1E1E] h-[130px] w-full mt-4 rounded-[15px] '>
+        <div className='bg-[#1E1E1E] h-[130px] w-full my-4 rounded-[15px] '>
 
         </div>
       </section>

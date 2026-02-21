@@ -1,5 +1,5 @@
 import React from 'react'
-import {  FaPhoneAlt } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { FaCirclePlay } from "react-icons/fa6";
 import { IoSettingsSharp } from "react-icons/io5";
 import { BsCameraFill } from "react-icons/bs";

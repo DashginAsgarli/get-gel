@@ -1,6 +1,7 @@
 import React from 'react'
 import Img1 from '../../assets/img1.svg'
 import Music from './music'
+import Footer from '../footer/footer'
 function HomePage() {
     return (
         <>
@@ -19,6 +20,7 @@ function HomePage() {
                     </div>
 
                     <Music />
+                    <Footer />
                 </div>
             </section>
 
