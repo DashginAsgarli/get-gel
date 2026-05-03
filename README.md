@@ -18,7 +18,7 @@ After selecting a service from the Trip, Scooter, Plan, Food, or Send cards, ent
 > <ul>
 > <li> <b>Color</b>: `#1A4162` (brand navy) + Sky-400 aksent </li>
 > <li> <b>Font</b>: Plus Jakarta Sans </li>
-> <li> <b>Dark Mode</b>: Tam dəstək (localStorage-da saxlanılır) </li>
+> <li> <b>Dark Mode</b>: Full support (stored in localStorage) </li>
 > <li> <b>Animations</b>: fadeIn, splash exit, pulse ring </li>
 > <li> <b>Premium effects</b>: Gradient brand, food, market </li>
 > </ul>
@@ -61,7 +61,7 @@ After selecting a service from the Trip, Scooter, Plan, Food, or Send cards, ent
 ## Packages used
 
 ```json
-"react-router-dom": "^6.22.0"   ← Routing
+"react-router-dom": "^6.22.0"    ← Routing
 "react-icons": "^5.0.1"          ← Icons
 "leaflet": "^1.9.4"              ← Map
 "react-leaflet": "^4.2.1"        ← React Leaflet
