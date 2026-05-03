@@ -1,24 +1,18 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,12,24&height=220&section=header&text=Get%20Gel%20App&fontSize=54&fontColor=ffffff&fontAlignY=38&descAlignY=58&descSize=20&animation=fadeIn" width="100%"/>
 
+# Get Gel App
 
-<div align="center">
+<div>
 
 [![Live Demo](https://img.shields.io/badge/%20Live%20Demo-22c55e?style=for-the-badge)](https://dashginasgarli.github.io/get-gel/)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![tailwindcss](https://img.shields.io/badge/tailwind%20css-00C7B7?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://netlify.com)
-
 </div>
 
-> [!NOTE]
-> <ul>
-> <li>Service cards (Trip, Scooter, Plan, Food, Send)</li>
-> <li>Enter address (pickup + destination + additional stop)</li>
-> <li>Select payment method (Cash / Card)</li>
-> <li>Select ride type (GetGəl, Priority, XL, Eco) — price is calculated</li>
-> </ul>
+##  Overview
+After selecting a service from the Trip, Scooter, Plan, Food, or Send cards, enter the pickup address, destination, and any additional stops; then, choose your payment method (Cash or Card) and select a ride type (GetGəl, Priority, XL, or Eco) to see the calculated price and complete your request.
 
 
-## 🎨 Design System
+## Design System
 
 > [!NOTE]
 > <ul>
@@ -29,10 +23,9 @@
 > <li> <b>Premium effects</b>: Gradient brand, food, market </li>
 > </ul>
   
----
 
 
-## 📁 File Structure
+## File Structure
 
 ```
 └── src/
@@ -50,7 +43,7 @@
     │       └── profile/
 ```
 
-## 🛣️ Routing (React Router)
+## Routing (React Router)
 
 | URL          | Page                | Disclosure                   |
 |--------------|---------------------|------------------------------|
@@ -82,6 +75,3 @@ npm install
 npm run dev      # localhost:5173
 npm run build    # Production build
 ```
-
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,12,24&height=130&section=footer" width="100%"/>
