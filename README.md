@@ -1,125 +1,87 @@
-# GetGəl — React + Tailwind Layihəsi
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,12,24&height=220&section=header&text=Get%20Gel%20App&fontSize=54&fontColor=ffffff&fontAlignY=38&descAlignY=58&descSize=20&animation=fadeIn" width="100%"/>
 
-## 📁 Fayl Strukturu
+
+<div align="center">
+
+[![Live Demo](https://img.shields.io/badge/%20Live%20Demo-22c55e?style=for-the-badge)](https://dashginasgarli.github.io/get-gel/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![tailwindcss](https://img.shields.io/badge/tailwind%20css-00C7B7?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://netlify.com)
+
+</div>
+
+> [!NOTE]
+> <ul>
+> <li>Service cards (Trip, Scooter, Plan, Food, Send)</li>
+> <li>Enter address (pickup + destination + additional stop)</li>
+> <li>Select payment method (Cash / Card)</li>
+> <li>Select ride type (GetGəl, Priority, XL, Eco) — price is calculated</li>
+> </ul>
+
+
+## 🎨 Design System
+
+> [!NOTE]
+> <ul>
+> <li> <b>Color</b>: `#1A4162` (brand navy) + Sky-400 aksent </li>
+> <li> <b>Font</b>: Plus Jakarta Sans </li>
+> <li> <b>Dark Mode</b>: Tam dəstək (localStorage-da saxlanılır) </li>
+> <li> <b>Animations</b>: fadeIn, splash exit, pulse ring </li>
+> <li> <b>Premium effects</b>: Gradient brand, food, market </li>
+> </ul>
+  
+---
+
+
+## 📁 File Structure
 
 ```
-getgel-app/
-├── index.html
-├── vite.config.js
-├── tailwind.config.js
-├── postcss.config.js
-├── package.json
 └── src/
-    ├── main.jsx                          ← Başlanğıc nöqtəsi
-    ├── App.jsx                           ← Routing + Provider wrapper
-    ├── index.css                         ← Global stillər + Tailwind
-    │
     ├── context/
-    │   └── AppContext.jsx                ← Global state (user, cart, dark mode, toasts)
-    │
     ├── data/
-    │   └── mockData.js                   ← Mock məlumatlar (restoranlar, məhsullar, tariflər)
-    │
     ├── components/
     │   ├── layout/
-    │   │   ├── Header.jsx                ← Yuxarı bar (logo, dark mode, geri düyməsi)
-    │   │   └── Sidebar.jsx               ← Sol menü (Ödeme, Promosyonlar, Abonelikler...)
-    │   │
     │   ├── ui/
-    │   │   ├── Toast.jsx                 ← Bildiriş komponenti
-    │   │   └── SplashScreen.jsx          ← Açılış ekranı (animasiyalı)
-    │   │
     │   └── pages/
     │       ├── auth/
-    │       │   ├── LoginPage.jsx         ← Giriş formu (validasiya ilə)
-    │       │   └── RegisterPage.jsx      ← Qeydiyyat formu (validasiya ilə)
-    │       │
     │       ├── home/
-    │       │   └── HomePage.jsx          ← Xəritə + bottom sheet + sürüş axını
-    │       │
     │       ├── food/
-    │       │   └── FoodPage.jsx          ← Restoranlar + menü + səbət
-    │       │
     │       ├── market/
-    │       │   └── MarketPage.jsx        ← Bazar + məhsullar + səbət
-    │       │
     │       ├── trips/
-    │       │   └── TripsPage.jsx         ← Keçmiş yolculuqlar
-    │       │
     │       └── profile/
-    │           └── ProfilePage.jsx       ← Hesab + tablar (Ödeme, Promos, Abonelik, Güvenlik...)
 ```
 
 ## 🛣️ Routing (React Router)
 
-| URL          | Səhifə              | Açıqlama                     |
+| URL          | Page                | Disclosure                   |
 |--------------|---------------------|------------------------------|
-| `/`          | HomePage            | Xəritə + sürüş sifariş axını |
-| `/login`     | LoginPage           | Giriş formu                  |
-| `/register`  | RegisterPage        | Qeydiyyat formu              |
-| `/food`      | FoodPage            | GetGəl Gıda                  |
-| `/market`    | MarketPage          | GetGəl Pazarı                |
-| `/trips`     | TripsPage           | Yolculuq tarixi              |
-| `/profile`   | ProfilePage         | Hesab idarəetməsi            |
+| `/`          | HomePage            | Map + ride booking flow      |
+| `/login`     | LoginPage           | Login form                   |
+| `/register`  | RegisterPage        | Registration form            |
+| `/food`      | FoodPage            | GetGel Food                  |
+| `/market`    | MarketPage          | GetGel Market                |
+| `/trips`     | TripsPage           | Travel date                  |
+| `/profile`   | ProfilePage         | Account management           |
 
-## 🎯 Funksiyalar
 
-### Auth
-- Login/Register formu validasiya ilə
-- localStorage-da user məlumatı saxlanılır
-- Giriş etmədən qorunan səhifələr redirect verir
 
-### Ana Səhifə (Ride Flow)
-1. Xidmət kartları (Yolculuklar, Scooterlar, Planla, Gıda, Send)
-2. Ünvan daxil et (pickup + destination + əlavə dayanacaq)
-3. Promo kod tətbiq et
-4. Ödeme üsulu seç (Nağd / Kart)
-5. Sürüş növü seç (GetGəl, Priority, XL, Eco) — qiymət hesablanır
-6. Sürücü seçimi (multi/single)
-7. Sürücü axtarılır → Sürücü tapıldı (zəng + mesaj)
 
-### GetGəl Gıda
-- Restoran siyahısı (kateqoriya + axtarış filtri)
-- Restoran detay səhifəsi (menü)
-- Səbətə məhsul əlavə/çıxar
-- Sifariş ver
-
-### GetGəl Pazarı  
-- Məhsul grid (kateqoriya filtrası)
-- Stok göstəricisi
-- Ədəd artır/azalt
-- Səbət modal + Sifariş
-
-### Profile Tabları
-- **Ödeme** — Kart/Nağd/Apple Pay/Google Pay
-- **Promosyonlar** — Kod daxil et + mövcud promolar (GETGEL20, YENI10, FOOD15)
-- **Abonelikler** — Basic/Pro/Business planlar
-- **Güvenlik** — Telefon, E-poçt, Şifrə, 2FA
-- **Destek** — Kateqoriya seç + Canlı chat
-- **Hakkında** — Versiya + Siyasətlər
-
-## 🎨 Dizayn Sistemi
-
-- **Rəng**: `#1A4162` (brand navy) + Sky-400 aksent
-- **Font**: Plus Jakarta Sans
-- **Dark Mode**: Tam dəstək (localStorage-da saxlanılır)
-- **Animasiyalar**: fadeIn, splash exit, pulse ring
-- **Premium effektlər**: Gradient brand, food, market
-
-## 📦 İstifadə edilən paketlər
+## Packages used
 
 ```json
 "react-router-dom": "^6.22.0"   ← Routing
-"react-icons": "^5.0.1"          ← İkonlar (fi + fa)
-"leaflet": "^1.9.4"              ← Xəritə
+"react-icons": "^5.0.1"          ← Icons
+"leaflet": "^1.9.4"              ← Map
 "react-leaflet": "^4.2.1"        ← React Leaflet
-"tailwindcss": "^3.4.1"          ← Stillər
+"tailwindcss": "^3.4.1"          ← Styles
 ```
 
-## 🚀 Başlatma
+## Get started
 
 ```bash
 npm install
 npm run dev      # localhost:5173
 npm run build    # Production build
 ```
+
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=4,12,24&height=130&section=footer" width="100%"/>
