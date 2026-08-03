@@ -1,29 +1,30 @@
-
 # Get Gel App
 
-<div>
+A ride-booking concept app modeled after services like Bolt. After selecting
+a service from the Trip, Scooter, Plan, Food, or Send cards, the user enters
+a pickup address, destination, and any additional stops, then chooses a
+payment method (Cash or Card) and a ride type (GetGəl, Priority, XL, or Eco)
+to see the calculated price and complete the request.
 
-[![Live Demo](https://img.shields.io/badge/%20Live%20Demo-22c55e?style=for-the-badge)](https://dashginasgarli.github.io/get-gel/)
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![tailwindcss](https://img.shields.io/badge/tailwind%20css-00C7B7?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://netlify.com)
-</div>
-
-##  Overview
-After selecting a service from the Trip, Scooter, Plan, Food, or Send cards, enter the pickup address, destination, and any additional stops; then, choose your payment method (Cash or Card) and select a ride type (GetGəl, Priority, XL, or Eco) to see the calculated price and complete your request.
-
+---
 
 ## Design System
 
-> [!NOTE]
-> <ul>
-> <li> <b>Color</b>: `#1A4162` (brand navy) + Sky-400 aksent </li>
-> <li> <b>Font</b>: Plus Jakarta Sans </li>
-> <li> <b>Dark Mode</b>: Full support (stored in localStorage) </li>
-> <li> <b>Animations</b>: fadeIn, splash exit, pulse ring </li>
-> <li> <b>Premium effects</b>: Gradient brand, food, market </li>
-> </ul>
-  
+- **Color** — `#1A4162` (brand navy) + Sky-400 accent
+- **Font** — Plus Jakarta Sans
+- **Dark Mode** — full support, persisted in localStorage
+- **Animations** — fadeIn, splash exit, pulse ring
+- **Premium effects** — gradient brand, food, market surfaces
 
+---
+
+## Architecture
+
+State that needs to persist or be shared across screens (such as the current
+booking flow and dark mode) is handled through **React Context**
+(`src/context/`), rather than prop-drilling it through components. The map
+view is built with **Leaflet** via `react-leaflet`, and routing between
+top-level pages is handled by **React Router**.
 
 ## File Structure
 
@@ -55,9 +56,6 @@ After selecting a service from the Trip, Scooter, Plan, Food, or Send cards, ent
 | `/trips`     | TripsPage           | Travel date                  |
 | `/profile`   | ProfilePage         | Account management           |
 
-
-
-
 ## Packages used
 
 ```json
@@ -68,10 +66,44 @@ After selecting a service from the Trip, Scooter, Plan, Food, or Send cards, ent
 "tailwindcss": "^3.4.1"          ← Styles
 ```
 
+---
+
+## Tech Stack
+
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+
+---
+
 ## Get started
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/DashginAsgarli/get-gel.git
+
+# 2. Navigate into the project
+cd get-gel
+
+# 3. Install dependencies
 npm install
+
+# 4. Run it
 npm run dev      # localhost:5173
 npm run build    # Production build
 ```
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Contact
+
+<div>
+
+[![Email](https://img.shields.io/badge/Gmail-dashqinasgarli%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dashqinasgarli@gmail.com)
+&nbsp;
+
+</div>
